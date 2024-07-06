@@ -57,8 +57,15 @@ Using the above results, we can integrate $\dot{h}_{+}^2+\dot{h}_{\times}^2$ ove
 \frac{\mathrm{d} E}{\mathrm{d} t}=\lim_{r\to\infty}\frac{r^2}{16\pi}\left<|\dot{h}_{22}|^2+|\dot{h}_{2-2}|^2+\frac{1}{6}\left(\dot{h}^{*}_{22}\dot{h}_{2-2}+\dot{h}_{22}\dot{h}^{*}_{2-2}\right)\right>.
 ```
 To avoid averaging over several wavelengths, we calculate the total energy by numerically integrating the time array.
-### Dephasing Coefficients
+## Dephasing Coefficients
 ```math
     p_i\to (1+\delta p_i)p_i.
 ```
 These fractional deviations are known as the dephasing coefficients. The phasing of IMRPhenomPv2 consists of three regimes. The first of which is the inspiral regime which is parameterized by PN coefficients [A. Buonanno et al., (2013).] $`\left\{\chi_0,\dots,\chi_7 \right\}`$ and $`\left\{\chi_{5l},\chi_{6l}\right\}`$. In this regime, there are also phenomenological parameters $`\left\{\sigma_0,\dots,\sigma_4\right\}`$ that contribute to the high effective PN order. This corrects for non-adiabaticity in the late inspiral phase and unknown high-order PN coefficients in the adiabatic regime. The second regime, is the intermediate regime, which is parameterized by the phenomenological coefficients $`\left\{\beta_0,\dots,\beta_3\right\}`$. Finally, there is the merger-ringdown regime which is parameterized by a combination of the phenomenological coefficients and the analytical black-hole perturbation theory parameters $`\left\{\alpha_0,\dots,\alpha_5\right\}`$ [J. Meidam et at., (2018).]. As one can see, if $\delta p_i=0$ this corresponds to a theory with no deviation from GR. 
+## Truncating the Waveform in the Inspiral Regime
+One potential obstacle is that the upper bound and lower bound for the integration of time was kind of chosen arbitrarily. Since we evaluate the energy over the same hypersurface, the total energy emitted by a GW should be the same, it is just that the energy is distributed over different time intervals. Therefore, if we integrate from $-\infty<t<\infty$, the $\delta E/E_{GR}$ should always be zero. This means we have to choose a fair and physically meaningful time interval. Otherwise, $\delta E/E_{GR}$ will obviously be different as the energy is distributed differently over time, but it will not be physically meaningful. Recall that $\delta\chi_i$ only changes the waveform in the inspiral phase, therefore we have to find a way to cut off the GW waveform before it reaches the merger phase. To do this, recall that the inspiral phase is characterized by $0.004\leq Mf\leq0.018$, where $M$ is the total mass and $f$ is the GW frequency. For this, we can constrain the upper bound of $t/M$ (Here, $t/M=0$ corresponds to the time of BBH coalescence.) by using the upper bound cutoff frequency $Mf=0.018$ by the following equation
+```math
+\frac{\dd t}{\dd f}=F(M,q,\delta\chi,f)
+```
+where $F(M,q,\delta\chi,f)$ is some function of $M$, $q$, $\delta\chi$, and $f$. There is no analytical form of $F(M,q,\delta\chi,f)$, so we need to compute the integral numerically. Similarly, we can set the lower bound to be $Mf=0.004$ and use the same formula to calculate the corresponding lower bound for $t/M$. This way, we can include most of the inspiral phase in our energy calculation. 
+![Alt text](examples/geodesics_xz.png)
