@@ -68,4 +68,5 @@ One potential obstacle is that the upper bound and lower bound for the integrati
 \frac{\mathrm{d} t}{\mathrm{d} f}=F(M,q,\delta\chi,f)
 ```
 where $F(M,q,\delta\chi,f)$ is some function of $M$, $q$, $\delta\chi$, and $f$. There is no analytical form of $F(M,q,\delta\chi,f)$, so we need to compute the integral numerically. Similarly, we can set the lower bound to be $Mf=0.004$ and use the same formula to calculate the corresponding lower bound for $t/M$. This way, we can include most of the inspiral phase in our energy calculation. 
+
 ![Alt text](examples/relative_velocity.png)
