@@ -17,6 +17,6 @@ Therefore the Isaacson stress-energy tensor can be written explicitly as
 ```
 To compute the energy carried by a GW, we take the 00-component of the Isaacson stress-energy tensor and integrate over the volume $V$ 
 ```math
-    \frac{\dd E}{\dd t}=\lim_{r\to\infty} \frac{1}{16\pi}\int_S  \left<\dot{h}_{+}^2+\dot{h}_{\times}^2\right>r^2\dd \Omega  ,
+    \frac{\mathrm{d} E}{\mathrm{d} t}=\lim_{r\to\infty} \frac{1}{16\pi}\int_S  \left<\dot{h}_{+}^2+\dot{h}_{\times}^2\right>r^2\mathrm{d} \Omega  ,
 ```
 where $h_{+}$ and $h_{\times}$ are the plus and cross polarizations of the GW, respectively, and the overdots represent the derivative with respect to coordinate time. 
