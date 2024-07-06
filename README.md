@@ -1,4 +1,4 @@
-# Test of General Relativity via Gravitational-Wave Energy Deviations
+    # Test of General Relativity via Gravitational-Wave Energy Deviations
 The following repository is a compilation of codes used to test general relativity (GR) using the energy deviations from gravitational radiation. The majority of the calculations here are done in Python and compiled in a Jupyter notebook. Moreover, we are primarily using the PyCBC software package to generate the waveforms and modify the post-Newtonian (PN) coefficients. 
 
 GitHub repository for PyCBC: https://github.com/gwastro/pycbc
