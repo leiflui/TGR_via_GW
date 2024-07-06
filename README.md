@@ -20,3 +20,13 @@ To compute the energy carried by a GW, we take the 00-component of the Isaacson 
     \frac{\mathrm{d} E}{\mathrm{d} t}=\lim_{r\to\infty} \frac{1}{16\pi}\int_S  \left<\dot{h}_{+}^2+\dot{h}_{\times}^2\right>r^2\mathrm{d} \Omega  ,
 ```
 where $h_{+}$ and $h_{\times}$ are the plus and cross polarizations of the GW, respectively, and the overdots represent the derivative with respect to coordinate time. 
+## Aligned-Spin Binaries and Spin-Weighted Spherical Harmonics
+To obtain an analytic expression for the integral over solid angle $\Omega$, we separate $h_{+}$ and $h_{\times}$ into time-dependent and angular parts. This can be done using spin-weighted spherical harmonics $_{s}Y_{\ell m}$. For outgoing GWs, we are concerned with the spin weight $s=-2$, as the graviton is a massless spin-2 particle and the negative sign corresponds to outgoing GWs. Hence, the $+$- and $\times$-polarizations can be written as
+```math
+        h_{+}-ih_{\times}&=\sum_{lm}{_{-2}}Y_{lm}(\theta,\phi)h_{lm}(t)\approx{_{-2}}Y_{22}(\theta,\phi)h_{22}(t)+{_{-2}}Y_{2-2}(\theta,\phi)h_{2-2}(t),
+```
+where the second line has been truncated because, for aligned-spin binaries, the $h_{22}$ and $h_{2-2}$ modes are the leading order terms. Taking the time derivative of the equation above and multiplying this expression by its complex conjugate, we obtain the following expression
+```math
+    \dot{h}_{+}^2+\dot{h}_{\times}^2=&|{_{-2}}Y_{22}|^2|\dot{h}_{2,2}|^2+{_{-2}}Y_{22}\;{_{-2}}Y_{2-2}^{*}\dot{h}_{22}\dot{h}^{*}_{2-2}+{{_{-2}}}Y_{22}^{*}\;{_{-2}}Y_{2-2}\dot{h}^{*}_{22}\dot{h}_{2-2}+|{_{-2}}Y_{2-2}|^2|\dot{h}_{2-2}|^2.
+```
+\end{equation}
