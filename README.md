@@ -7,7 +7,7 @@ Similar to electromagnetic waves, we can compute the energy of a gravitational w
 ```math
     t_{\mu\nu}=-\frac{1}{8\pi}\left< R_{\mu\nu}^{(2)}-\frac{1}{2}\bar{g}_{\mu\nu} R^{(2)} \right>,
 ```
-where $R_{\mu\nu}^{(2)}$ is the Ricci tensor to the expanded to second order in the perturbed metric $h_{\mu\nu}$, `$\bar{g}_{\mu\nu}`$ is the background metric, and the angle brackets `$\left< \dots \right>`$ denotes the average over several wavelengths. Basically, the Isaacson stress-energy tensor is the Einstein equation expanded to second order in $h_{\mu\nu}$. $R_{\mu\nu}^{(2)}$ usually involves many terms quadratic in the metric perturbation, however, we can simplify this expression by performing integration by parts and using the transverse-traceless(TT) gauge condition. This is basically where we choose $h_{0\alpha}=h^i_{i}=\nabla_jh^{ij}=0$. Thus, 
+where $R_{\mu\nu}^{(2)}$ is the Ricci tensor to the expanded to second order in the perturbed metric $h_{\mu\nu}$, $`\bar{g}_{\mu\nu}`$ is the background metric, and the angle brackets $`\left< \dots \right>`$ denotes the average over several wavelengths. Basically, the Isaacson stress-energy tensor is the Einstein equation expanded to second order in $h_{\mu\nu}$. $R_{\mu\nu}^{(2)}$ usually involves many terms quadratic in the metric perturbation, however, we can simplify this expression by performing integration by parts and using the transverse-traceless(TT) gauge condition. This is basically where we choose $h_{0\alpha}=h^i_{i}=\nabla_jh^{ij}=0$. Thus, 
 ```math
     R_{\mu\nu}^{(2)}=\left<\partial_{\mu}h_{\alpha\beta}^{TT}\partial_{\nu}h^{\alpha\beta}_{TT}\right>.
 ```
@@ -36,7 +36,7 @@ With this, the task at hand is to calculate $h_{22}$ and $h_{2-2}$. To do so, we
 ```math
     {_{-2}}Y_{2-2}(\theta,\phi)=\sqrt{\frac{5}{64\pi}}(1-\cos\theta)^2e^{-2i\phi}.
 ```
-Notice that `${_{-2}}Y_{22}(0,0)={_{-2}}Y_{2-2}(0,\pi)=\frac{1}{2}\sqrt{\frac{5}{\pi}}`$ and `${_{-2}}Y_{2-2}(0,0)={_{-2}}Y_{22}(0,\pi)=0`$ . Therefore, to solve for $h_{22}$ and $h_{2-2}$, we simply calculate $h_{+}-ih_{\times}$ at $\theta=\phi=0$, and $\phi=0$, $\theta=\pi$. This can be done using \texttt{PyCBC} and \texttt{LALSimulation}. Doing so we find that
+Notice that $`{_{-2}}Y_{22}(0,0)={_{-2}}Y_{2-2}(0,\pi)=\frac{1}{2}\sqrt{\frac{5}{\pi}}`$ and $`{_{-2}}Y_{2-2}(0,0)={_{-2}}Y_{22}(0,\pi)=0`$ . Therefore, to solve for $h_{22}$ and $h_{2-2}$, we simply calculate $h_{+}-ih_{\times}$ at $\theta=\phi=0$, and $\phi=0$, $\theta=\pi$. This can be done using \texttt{PyCBC} and \texttt{LALSimulation}. Doing so we find that
 ```math
         h_{22}(t)=\sqrt{\frac{4\pi}{5}}[h_{+}(t,0,0)-ih_{\times}(t,0,0)],
 ```
@@ -46,14 +46,14 @@ and
 ```
 Since we are considering non-precessing binaries, $\theta$ contains no time dependence. Therefore, to integrate Eq. \eqref{multipole} over solid angle, we simply compute the following integrals,
 ```math
-    \int_S |{_{-2}}Y_{22}|^2\dd\Omega=\int_S |{_{-2}}Y_{2-2}|^2\dd\Omega=1,
+    \int_S |{_{-2}}Y_{22}|^2\mathrm{d}\Omega=\int_S |{_{-2}}Y_{2-2}|^2\mathrm{d}\Omega=1,
 ```
 and 
 ```math
-\int_S {_{-2}}Y_{22}^{*}\;{_{-2}}Y_{2-2}\dd\Omega= \int_S {_{-2}}Y_{22}\;{_{-2}}Y_{2-2}^{*}\dd\Omega=\frac{1}{6}.
+\int_S {_{-2}}Y_{22}^{*}\;{_{-2}}Y_{2-2}\mathrm{d}\Omega= \int_S {_{-2}}Y_{22}\;{_{-2}}Y_{2-2}^{*}\mathrm{d}\Omega=\frac{1}{6}.
 ```
 Using the above results, we can integrate $\dot{h}_{+}^2+\dot{h}_{\times}^2$ over solid angle to obtain the instantaneous power
 ```math
-\frac{\dd E}{\dd t}=&\lim_{r\to\infty}\frac{r^2}{16\pi}\left<|\dot{h}_{22}|^2+|\dot{h}_{2-2}|^2+\frac{1}{6}\left(\dot{h}^{*}_{22}\dot{h}_{2-2}+\dot{h}_{22}\dot{h}^{*}_{2-2}\right)\right>.
+\frac{\mathrm{d} E}{\mathrm{d} t}=&\lim_{r\to\infty}\frac{r^2}{16\pi}\left<|\dot{h}_{22}|^2+|\dot{h}_{2-2}|^2+\frac{1}{6}\left(\dot{h}^{*}_{22}\dot{h}_{2-2}+\dot{h}_{22}\dot{h}^{*}_{2-2}\right)\right>.
 ```
 To avoid averaging over several wavelengths, we calculate the total energy by numerically integrating the time array.
