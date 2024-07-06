@@ -57,3 +57,9 @@ Using the above results, we can integrate $\dot{h}_{+}^2+\dot{h}_{\times}^2$ ove
 \frac{\mathrm{d} E}{\mathrm{d} t}=\lim_{r\to\infty}\frac{r^2}{16\pi}\left<|\dot{h}_{22}|^2+|\dot{h}_{2-2}|^2+\frac{1}{6}\left(\dot{h}^{*}_{22}\dot{h}_{2-2}+\dot{h}_{22}\dot{h}^{*}_{2-2}\right)\right>.
 ```
 To avoid averaging over several wavelengths, we calculate the total energy by numerically integrating the time array.
+### Dephasing Coefficients
+A parameterized test of GR is to search for deviations of observations from the predictions of GR. To perform the parameterized tests, we introduce fractional deviations $\delta p_i$ to the \IMRPhenomPv2 phase coefficients $p_i$ [M. Agathos et al., (2013).], namely
+\begin{equation}
+    p_i\to (1+\delta p_i)p_i.
+\end{equation}
+These fractional deviations are known as the dephasing coefficients. The phasing of IMRPhenomPv2 consists of three regimes. The first of which is the inspiral regime which is parameterized by PN coefficients [A. Buonanno et al., (2013).] $\left\{\chi_0,\dots,\chi_7\right\}$ and $\left\{\chi_{5l},\chi_{6l}\right\}$. In this regime, there are also phenomenological parameters $\left\{\sigma_0,\dots,\sigma_4\right\}$ that contribute to the high effective PN order. This corrects for non-adiabaticity in the late inspiral phase and unknown high-order PN coefficients in the adiabatic regime. The second regime, is the intermediate regime, which is parameterized by the phenomenological coefficients $\left\{\beta_0,\dots,\beta_3\right\}$. Finally, there is the merger-ringdown regime which is parameterized by a combination of the phenomenological coefficients and the analytical black-hole perturbation theory parameters $\left\{\alpha_0,\dots,\alpha_5\right\}$ \cite{meidam}. As one can see if $\delta p_i=0$ this corresponds to a theory with no deviation from GR. 
