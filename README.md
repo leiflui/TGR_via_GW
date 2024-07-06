@@ -7,7 +7,7 @@ Similar to electromagnetic waves, we can compute the energy of a gravitational w
 ```math
     t_{\mu\nu}=-\frac{1}{8\pi}\left< R_{\mu\nu}^{(2)}-\frac{1}{2}\bar{g}_{\mu\nu} R^{(2)} \right>,
 ```
-where $R_{\mu\nu}^{(2)}$ is the Ricci tensor to the expanded to second order in the perturbed metric $h_{\mu\nu}$, $\bar{g}_{\mu\nu}$ is the background metric, and the angle brackets $\left<\dots\right>$ denotes the average over several wavelengths. Basically, the Isaacson stress-energy tensor is the Einstein equation expanded to second order in $h_{\mu\nu}$. $R_{\mu\nu}^{(2)}$ usually involves many terms quadratic in the metric perturbation, however, we can simplify this expression by performing integration by parts and using the transverse-traceless(TT) gauge condition. This is basically where we choose $h_{0\alpha}=h^i_{i}=\nabla_jh^{ij}=0$. Thus, 
+where $R_{\mu\nu}^{(2)}$ is the Ricci tensor to the expanded to second order in the perturbed metric $h_{\mu\nu}$, `$\bar{g}_{\mu\nu}`$ is the background metric, and the angle brackets `$\left< \dots \right>`$ denotes the average over several wavelengths. Basically, the Isaacson stress-energy tensor is the Einstein equation expanded to second order in $h_{\mu\nu}$. $R_{\mu\nu}^{(2)}$ usually involves many terms quadratic in the metric perturbation, however, we can simplify this expression by performing integration by parts and using the transverse-traceless(TT) gauge condition. This is basically where we choose $h_{0\alpha}=h^i_{i}=\nabla_jh^{ij}=0$. Thus, 
 ```math
     R_{\mu\nu}^{(2)}=\left<\partial_{\mu}h_{\alpha\beta}^{TT}\partial_{\nu}h^{\alpha\beta}_{TT}\right>.
 ```
@@ -36,11 +36,11 @@ With this, the task at hand is to calculate $h_{22}$ and $h_{2-2}$. To do so, we
 ```math
     {_{-2}}Y_{2-2}(\theta,\phi)=\sqrt{\frac{5}{64\pi}}(1-\cos\theta)^2e^{-2i\phi}.
 ```
-Notice that ${_{-2}}Y_{22}(0,0)={_{-2}}Y_{2-2}(0,\pi)=\frac{1}{2}\sqrt{\frac{5}{\pi}}$ and ${_{-2}}Y_{2-2}(0,0)={_{-2}}Y_{22}(0,\pi)=0$ . Therefore, to solve for $h_{22}$ and $h_{2-2}$, we simply calculate $h_{+}-ih_{\times}$ at $\theta=\phi=0$, and $\phi=0$, $\theta=\pi$. This can be done using \texttt{PyCBC} and \texttt{LALSimulation}. Doing so we find that
-    \begin{equation}
+Notice that `${_{-2}}Y_{22}(0,0)={_{-2}}Y_{2-2}(0,\pi)=\frac{1}{2}\sqrt{\frac{5}{\pi}}`$ and `${_{-2}}Y_{2-2}(0,0)={_{-2}}Y_{22}(0,\pi)=0`$ . Therefore, to solve for $h_{22}$ and $h_{2-2}$, we simply calculate $h_{+}-ih_{\times}$ at $\theta=\phi=0$, and $\phi=0$, $\theta=\pi$. This can be done using \texttt{PyCBC} and \texttt{LALSimulation}. Doing so we find that
+```math
         h_{22}(t)=\sqrt{\frac{4\pi}{5}}[h_{+}(t,0,0)-ih_{\times}(t,0,0)],
-    \end{equation}
-    and
-    \begin{equation}
+```
+and
+```math
         h_{2-2}(t)=\sqrt{\frac{4\pi}{5}}[h_{+}(t,\pi,0)-ih_{\times}(t,\pi,0)].
-    \end{equation}
+``
