@@ -5,7 +5,7 @@ GitHub repository for PyCBC: https://github.com/gwastro/pycbc
 ## Energy Dissipated by Gravitational Waves of Coalescing binaries
 Similar to electromagnetic waves, we can compute the energy of a gravitational wave (GW) using multipole expansion. To do so, we first compute the Isaacson stress-energy tensor
 ```math
-    t_{\mu\nu}=-\frac{1}{8\pi}\left<R_{\mu\nu}^{(2)}-\frac{1}{2}\bar{g}_{\mu\nu} R^{(2)}\right>,
+    t_{\mu\nu}=-\frac{1}{8\pi}\left< R_{\mu\nu}^{(2)}-\frac{1}{2}\bar{g}_{\mu\nu} R^{(2)} \right>,
 ```
 where $R_{\mu\nu}^{(2)}$ is the Ricci tensor to the expanded to second order in the perturbed metric $h_{\mu\nu}$, $\bar{g}_{\mu\nu}$ is the background metric, and the angle brackets $\left<\dots\right>$ denotes the average over several wavelengths. Basically, the Isaacson stress-energy tensor is the Einstein equation expanded to second order in $h_{\mu\nu}$. $R_{\mu\nu}^{(2)}$ usually involves many terms quadratic in the metric perturbation, however, we can simplify this expression by performing integration by parts and using the transverse-traceless(TT) gauge condition. This is basically where we choose $h_{0\alpha}=h^i_{i}=\nabla_jh^{ij}=0$. Thus, 
 ```math
