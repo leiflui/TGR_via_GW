@@ -21,7 +21,7 @@ To compute the energy carried by a GW, we take the 00-component of the Isaacson 
 ```
 where $h_{+}$ and $h_{\times}$ are the plus and cross polarizations of the GW, respectively, and the overdots represent the derivative with respect to coordinate time. 
 ## Aligned-Spin Binaries and Spin-Weighted Spherical Harmonics
-To obtain an analytic expression for the integral over solid angle $\Omega$, we separate $h_{+}$ and $h_{\times}$ into time-dependent and angular parts. This can be done using spin-weighted spherical harmonics $_{s}Y_{\ell m}$. For outgoing GWs, we are concerned with the spin weight $s=-2$, as the graviton is a massless spin-2 particle and the negative sign corresponds to outgoing GWs. Hence, the $+$- and $\times$-polarizations can be written as
+To obtain an analytic expression for the integral over solid angle $\Omega$, we separate $h_{+}$ and $h_{\times}$ into time-dependent and angular parts. This can be done using spin-weighted spherical harmonics $`_{s}Y_{\ell m}`$. For outgoing GWs, we are concerned with the spin weight $s=-2$, as the graviton is a massless spin-2 particle and the negative sign corresponds to outgoing GWs. Hence, the $+$- and $\times$-polarizations can be written as
 ```math
         h_{+}-ih_{\times}=\sum_{lm}{_{-2}}Y_{lm}(\theta,\phi)h_{lm}(t)\approx{_{-2}}Y_{22}(\theta,\phi)h_{22}(t)+{_{-2}}Y_{2-2}(\theta,\phi)h_{2-2}(t),
 ```
@@ -36,7 +36,7 @@ With this, the task at hand is to calculate $h_{22}$ and $h_{2-2}$. To do so, we
 ```math
     {_{-2}}Y_{2-2}(\theta,\phi)=\sqrt{\frac{5}{64\pi}}(1-\cos\theta)^2e^{-2i\phi}.
 ```
-Notice that $`{_{-2}}Y_{22}(0,0)={_{-2}}Y_{2-2}(0,\pi)=\frac{1}{2}\sqrt{\frac{5}{\pi}}`$ and $`{_{-2}}Y_{2-2}(0,0)={_{-2}}Y_{22}(0,\pi)=0`$ . Therefore, to solve for $h_{22}$ and $h_{2-2}$, we simply calculate $h_{+}-ih_{\times}$ at $\theta=\phi=0$, and $\phi=0$, $\theta=\pi$. This can be done using $`\texttt{PyCBC`$ and $`\texttt{LALSimulation}`$. Doing so we find that
+Notice that $`{_{-2}}Y_{22}(0,0)={_{-2}}Y_{2-2}(0,\pi)=\frac{1}{2}\sqrt{\frac{5}{\pi}}`$ and $`{_{-2}}Y_{2-2}(0,0)={_{-2}}Y_{22}(0,\pi)=0`$ . Therefore, to solve for $h_{22}$ and $h_{2-2}$, we simply calculate $h_{+}-ih_{\times}$ at $\theta=\phi=0$, and $\phi=0$, $\theta=\pi$. This can be done using PyCBC and LALSimulation. Doing so we find that
 ```math
         h_{22}(t)=\sqrt{\frac{4\pi}{5}}[h_{+}(t,0,0)-ih_{\times}(t,0,0)],
 ```
