@@ -43,4 +43,17 @@ Notice that `${_{-2}}Y_{22}(0,0)={_{-2}}Y_{2-2}(0,\pi)=\frac{1}{2}\sqrt{\frac{5}
 and
 ```math
         h_{2-2}(t)=\sqrt{\frac{4\pi}{5}}[h_{+}(t,\pi,0)-ih_{\times}(t,\pi,0)].
-``
+```
+Since we are considering non-precessing binaries, $\theta$ contains no time dependence. Therefore, to integrate Eq. \eqref{multipole} over solid angle, we simply compute the following integrals,
+```math
+    \int_S |{_{-2}}Y_{22}|^2\dd\Omega=\int_S |{_{-2}}Y_{2-2}|^2\dd\Omega=1,
+```
+and 
+```math
+\int_S {_{-2}}Y_{22}^{*}\;{_{-2}}Y_{2-2}\dd\Omega= \int_S {_{-2}}Y_{22}\;{_{-2}}Y_{2-2}^{*}\dd\Omega=\frac{1}{6}.
+```
+Using the above results, we can integrate $\dot{h}_{+}^2+\dot{h}_{\times}^2$ over solid angle to obtain the instantaneous power
+```math
+\frac{\dd E}{\dd t}=&\lim_{r\to\infty}\frac{r^2}{16\pi}\left<|\dot{h}_{22}|^2+|\dot{h}_{2-2}|^2+\frac{1}{6}\left(\dot{h}^{*}_{22}\dot{h}_{2-2}+\dot{h}_{22}\dot{h}^{*}_{2-2}\right)\right>.
+```
+To avoid averaging over several wavelengths, we calculate the total energy by numerically integrating the time array.
