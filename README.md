@@ -71,5 +71,8 @@ where $F(M,q,\delta\chi,f)$ is some function of $M$, $q$, $\delta\chi$, and $f$.
 
 ![Alt text](examples/relative_velocity.png)
 
-## 4D Contour Plot with Varying Dephasing Coefficients and Binary Black Hole Parameters
+## 4-Dimensional Contour Plot with Varying Dephasing Coefficients and Binary Black Hole Parameters
 
+## Dephasing Coefficients that are Most Sensitive to Deviations from General Relativity
+Here, we use the interpolant shown previously to determine plot the contour and the vector field where changing the dephasing coefficient yields the largest energy deviation from GR. As an example, we plot the 3D contour along with the vector field of the energy deviation for varying $\delta \chi_4$ and $\delta \chi_{6l}$.
+![Alt text](examples/relative_velocity.png)
