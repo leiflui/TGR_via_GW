@@ -54,6 +54,6 @@ and
 ```
 Using the above results, we can integrate $\dot{h}_{+}^2+\dot{h}_{\times}^2$ over solid angle to obtain the instantaneous power
 ```math
-\frac{\mathrm{d} E}{\mathrm{d} t}=&\lim_{r\to\infty}\frac{r^2}{16\pi}\left<|\dot{h}_{22}|^2+|\dot{h}_{2-2}|^2+\frac{1}{6}\left(\dot{h}^{*}_{22}\dot{h}_{2-2}+\dot{h}_{22}\dot{h}^{*}_{2-2}\right)\right>.
+\frac{\mathrm{d} E}{\mathrm{d} t}=\lim_{r\to\infty}\frac{r^2}{16\pi}\left<|\dot{h}_{22}|^2+|\dot{h}_{2-2}|^2+\frac{1}{6}\left(\dot{h}^{*}_{22}\dot{h}_{2-2}+\dot{h}_{22}\dot{h}^{*}_{2-2}\right)\right>.
 ```
 To avoid averaging over several wavelengths, we calculate the total energy by numerically integrating the time array.
