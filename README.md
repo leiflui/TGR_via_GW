@@ -71,11 +71,11 @@ where $F(M,q,\delta\chi,f)$ is some function of $M$, $q$, $\delta\chi$, and $f$.
 
 ![Alt text](examples/relative_velocity.png)
 
-## Checking the Interpolant
+## Interpolating the Gravitational-Wave Energy Deviation
 As seen previously, each energy deviation is calculated through numerical integration and is quite computationally expensive to do this for many values of $\delta\chi_i$. Therefore, one can interpolate between points to obtain $`\delta E/E_{GR}`$ without large computational cost. We show a figure below where we vary $\delta\chi_4$, $M$, and $q$.
-![Alt text](examples/Varying_dchi4_and_dchi_6l.png)
+![Alt text](examples/4D_colormap_0p004=Mf=0p018_30by30by30_interpolant-1.png)
 To make sure that the interpolant is giving numerically accurate results, we the interpolated results to that of the ones actually calculated by numerical integration.
 ![Alt text](examples/interpolant_check.png)
-## Dephasing Coefficients that are Most Sensitive to Deviations from General Relativity
+## Finding the Dephasing Coefficients that Yield the Largest Energy Deviations
 Here, we use the interpolant shown previously to determine plot the contour and the vector field where changing the dephasing coefficient yields the largest energy deviation from GR. As an example, we plot the 3D contour along with the vector field of the energy deviation for varying $\delta \chi_4$ and $\delta \chi_{6}$.
 ![Alt text](examples/Varying_dchi4_and_dchi_6l.png)
