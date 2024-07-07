@@ -52,7 +52,7 @@ and
 ```math
 \int_S {_{-2}}Y_{22}^{*}\;{_{-2}}Y_{2-2}\mathrm{d}\Omega= \int_S {_{-2}}Y_{22}\;{_{-2}}Y_{2-2}^{*}\mathrm{d}\Omega=\frac{1}{6}.
 ```
-Using the above results, we can integrate $\dot{h}_{+}^2+\dot{h}_{\times}^2$ over solid angle to obtain the instantaneous power
+Using the above results, we can integrate $`\dot{h}_{+}^2+\dot{h}_{\times}^2`$ over solid angle to obtain the instantaneous power
 ```math
 \frac{\mathrm{d} E}{\mathrm{d} t}=\lim_{r\to\infty}\frac{r^2}{16\pi}\left<|\dot{h}_{22}|^2+|\dot{h}_{2-2}|^2+\frac{1}{6}\left(\dot{h}^{*}_{22}\dot{h}_{2-2}+\dot{h}_{22}\dot{h}^{*}_{2-2}\right)\right>.
 ```
