@@ -78,4 +78,6 @@ To make sure that the interpolant is giving numerically accurate results, we the
 ![Alt text](examples/interpolant_check.png)
 ## Finding the Dephasing Coefficients that Yield the Largest Energy Deviations
 Here, we use the interpolant shown previously to determine plot the contour and the vector field where changing the dephasing coefficient yields the largest energy deviation from GR. As an example, we plot the 3D contour along with the vector field of the energy deviation for varying $\delta \chi_4$ and $\delta \chi_{6}$.
-![Alt text](examples/Varying_dchi4_and_dchi_6l.png)
+![Alt text](examples/Varying_dchi4_and_dchi_6.png)
+We show another example of a 3D vector field when varying the 3 dephasing coefficients. Here the arrows have been omitted to avoid clutter.
+![Alt text](examples/4D_colormap_0p004=Mf=0p018_25by25_interpolant_varying_dchi0_dchi1_and_dchi7_q=1_M=60.png)
